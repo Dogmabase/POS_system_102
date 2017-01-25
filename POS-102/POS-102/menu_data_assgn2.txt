@@ -1,0 +1,21 @@
+Chicken Salad,0,4.5
+Ham and Cheese,0,5.0
+Turkey Sub,0,4.75
+Vegetable Wrap,0,4.0
+Tuna Salad,0,4.5
+Avacado and Cheese,0,4.0
+Teriyahi Chicken,0,5.5
+Peanut Butter,0,3.75
+Grilled Cheese,0,3.5
+Cold Cut,0,5.0
+Milk,1,1.75
+Juice,1,1.75
+Soda,1,2.0
+Lemonade,1,2.0
+Tea,1,1.5
+Coffee,1,1.5
+Chocolate Cake,2,5.0
+Cheesecake,2,5.0
+Fruit Tart,2,7.5
+Ice Cream,2,4.0
+Carrot Cake,2,6.25

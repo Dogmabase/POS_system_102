@@ -1,0 +1,17 @@
+Mayo,0
+Lettuce,0
+Meat,0
+Tomatos,0
+Onion,0
+Pickles,0
+Bread,0
+Peppers,0
+Cheese,0
+Avocado,0
+Cucumber,0
+Ice,1
+Sugar,1
+Milk,1
+Sweetener,1
+Lemon,1
+Caffeine,1

@@ -1,0 +1,68 @@
+﻿<Window x:Class="POS_102.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS_102"
+        xmlns:Controls="clr-namespace:POS_102.Controls" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1220">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="boolToVisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Menu goes here -->
+            <Controls:MenuControl />
+            <!-- inner grid contains buttons and ordered items -->
+            <Grid x:Name="InnerGrid" Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="700" />
+                    <ColumnDefinition Width="500" />
+                </Grid.ColumnDefinitions>
+                <!--<ContentControl>
+                    <ContentControl.ContentTemplate>
+                        <DataTemplate>
+                            <Controls:ItemDisplayControl />
+                            <DataTemplate.Triggers>
+                               
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </ContentControl.ContentTemplate>
+                </ContentControl>
+                
+                <Controls:ModifiersControl Visibility="Hidden"/>-->
+                <StackPanel Orientation="Vertical" >
+                    <!-- buttons displayed in ItemDisplayControl -->
+                    <Controls:ItemDisplayControl />
+                    
+                    <!-- this controls the visibility of the modifier buttons -->
+                    <Controls:ModifiersControl Visibility="{Binding ShowMod, Converter={StaticResource boolToVisibilityConverter}}" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="1">
+                    <Controls:OrderListControl />
+                </StackPanel>
+            </Grid>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" >
+                <CheckBox x:Name="ckbRye" Content="Rye" Margin="5" Checked="ckbBread_Checked" Unchecked="ckbBread_Unchecked" />
+                <CheckBox x:Name="ckbSourdough" Content="Sourdough" Margin="5" Checked="ckbBread_Checked" Unchecked="ckbBread_Unchecked" />
+                <CheckBox x:Name="ckbCiabatta" Content="Ciabatta" Margin="5" Checked="ckbBread_Checked" Unchecked="ckbBread_Unchecked" />
+                <CheckBox x:Name="ckbFrench" Content="French Bread" Margin="5" Checked="ckbBread_Checked" Unchecked="ckbBread_Unchecked" />
+                <CheckBox x:Name="ckbWheat" Content="Whole Wheat" Margin="5" Checked="ckbBread_Checked" Unchecked="ckbBread_Unchecked" />
+                <CheckBox x:Name="ckbGlutenx" Content="Gluten Free" Margin="5" Checked="ckbBread_Checked" Unchecked="ckbBread_Unchecked" />
+                <CheckBox x:Name="ckbWater" Content="Bring Water" IsChecked="True" Background="AliceBlue" Foreground="Black" FontSize="15" Margin="200,5,5,5" Unchecked="ckbWater_Unchecked"/>
+            </StackPanel>
+            <!--where footer goes-->
+            <Controls:FooterButtonsControl Grid.Row="3" VerticalAlignment="Bottom" />
+        </Grid>
+        <!--where overlay goes-->
+        
+    </Grid>
+</Window>
